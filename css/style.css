@@ -386,7 +386,12 @@ h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
 .intro-active body { overflow: hidden; }
 .intro-active .hero__name { animation-play-state: paused; }
 
-@media (prefers-reduced-motion: reduce) { .js .intro { display: none; } }
+/* Reduce Motion: the same envelope, opened with gentle fades instead of movement */
+.intro--calm .env, .intro--calm .env__seal, .intro--calm .intro__hint { animation: none; }
+.intro--calm .env__flap, .intro--calm .env__letter, .intro--calm .env__seal { transition: opacity .6s ease; }
+.intro--calm.is-opening .env__flap { transform: none; opacity: 0; }
+.intro--calm.is-opening .env__letter { transform: none; z-index: 7; }
+.intro--calm.is-opening .env__seal { transform: none; }
 
 /* ---------- couple names, family, contact ---------- */
 .hero__name { font-size: clamp(3rem, 1.9rem + 6vw, 6.6rem); line-height: 1.05; }

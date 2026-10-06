@@ -361,16 +361,20 @@ function initDrift() {
 /* ---------- envelope intro (home page, once per visit) ---------- */
 function initIntro(done) {
   const intro = $("#intro");
-  let seen = false;
-  try { seen = sessionStorage.getItem("envelopeOpened") === "1"; } catch {}
-  if (!intro || seen || reduceMotion) { intro?.remove(); done(); return; }
+  // plays every time the invitation is opened, but not when coming back from The Evening or Venue
+  let fromInnerPage = false;
+  try {
+    const ref = document.referrer && new URL(document.referrer);
+    fromInnerPage = !!ref && ref.origin === location.origin && /(evening|venue)(\.html)?$/.test(ref.pathname);
+  } catch {}
+  if (!intro || fromInnerPage) { intro?.remove(); done(); return; }
+  if (reduceMotion) intro.classList.add("intro--calm");
   const root = document.documentElement;
   root.classList.add("intro-active");
   let opened = false;
   function finish() {
     intro.classList.add("is-done");
     root.classList.remove("intro-active");
-    try { sessionStorage.setItem("envelopeOpened", "1"); } catch {}
     done();
     setTimeout(() => intro.remove(), 900);
   }
@@ -382,13 +386,13 @@ function initIntro(done) {
     intro.classList.add("is-opening");
     const env = $(".env", intro).getBoundingClientRect();
     setTimeout(() => drift.add(env.left + env.width / 2, env.top + env.height * .35, 46), 900);
-    setTimeout(finish, 2300);
+    setTimeout(finish, reduceMotion ? 1400 : 2300);
   }
   $("#intro-open").addEventListener("click", () => open(false));
   $("#intro-skip").addEventListener("click", () => open(true));
   addEventListener("keydown", e => { if (e.key === "Escape") open(true); }, { once: true });
   // opens by itself if nobody taps, so the invitation is never stuck behind the envelope
-  const auto = setTimeout(() => open(false), 2600);
+  const auto = setTimeout(() => open(false), 4000);
 }
 
 /* ---------- boot ---------- */
