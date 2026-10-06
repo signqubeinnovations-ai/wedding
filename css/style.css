@@ -454,8 +454,7 @@ main, .footer { overflow-x: clip; }
 .parents { font-style: italic; margin-top: -.6rem; }
 .parents span { white-space: nowrap; }
 
-/* ---------- no menu bar: buttons on the home page, a back link elsewhere ---------- */
-.hero__links { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: .6rem; }
+/* ---------- no menu bar: a back link on inner pages ---------- */
 .back {
   position: fixed; z-index: 40;
   top: calc(14px + env(safe-area-inset-top, 0px)); left: 16px;
