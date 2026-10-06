@@ -11,7 +11,6 @@ Contact: WhatsApp +91 94471 25325.
 | `index.html` | The invitation: name written on in gold, the letter, date/time/venue, live countdown, blessing and sign-off |
 | `evening.html` | The date set large, a clock whose hands sweep to 5:00 as you scroll, a setting sun, calendar buttons |
 | `venue.html` | A route line that draws itself as you scroll, address with copy button, Google/Apple Maps, how to get there |
-| `rsvp.html` | A reply form that writes a WhatsApp message for guests to send to the family |
 
 ## Scroll animations
 
@@ -26,7 +25,7 @@ Everything respects the visitor's "reduce motion" setting, and the content stays
 
 ## Settings
 
-- **RSVP WhatsApp number:** set `HOST_WHATSAPP` at the top of `js/main.js` (country code plus digits, e.g. `919876543210`). Currently set to +91 94471 25325. Left empty, WhatsApp asks the guest which chat to send to.
+- **Contact:** WhatsApp +91 94471 25325 appears in the contact card on the home page, on the venue page and in every footer.
 - **Event time:** `EVENT_START` / `EVENT_END` in `js/main.js` drive the countdown. The calendar links in `evening.html` and `adinan-engagement.ics` use the same times.
 
 ## Run locally

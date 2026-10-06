@@ -2,10 +2,6 @@
    Decorations (leaves, gold leaf), scroll reveal, parallax, scroll-drawn lines,
    nav, countdown, and the page-specific scenes on The Evening and Venue pages. */
 
-/* Put the hosts' WhatsApp number here (country code, digits only, e.g. "919876543210")
-   so RSVP replies open a chat with them directly. Left empty, WhatsApp asks whom to send to. */
-const HOST_WHATSAPP = "919447125325";
-
 const EVENT_START = Date.parse("2026-12-30T17:00:00+05:30");
 const EVENT_END = Date.parse("2026-12-30T22:00:00+05:30");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -226,51 +222,6 @@ function initCopy() {
   }));
 }
 
-/* ---------- RSVP ---------- */
-function initRsvp() {
-  const form = $("#rsvp-form");
-  if (!form) return;
-  const out = $("#guests-out"), guests = $("#guests");
-  const step = d => { const v = Math.min(10, Math.max(1, +guests.value + d)); guests.value = v; out.textContent = v; };
-  $("#guests-minus").addEventListener("click", () => step(-1));
-  $("#guests-plus").addEventListener("click", () => step(1));
-  $$('input[name="attending"]').forEach(r => r.addEventListener("change", () => {
-    $("#guests-field").hidden = $('input[name="attending"]:checked').value !== "yes";
-  }));
-
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    const err = $("#rsvp-error");
-    const name = $("#name").value.trim();
-    const att = $('input[name="attending"]:checked');
-    if (!name || !att) {
-      err.hidden = false;
-      err.textContent = !name ? "Please add your name so the family knows who is replying." : "Please choose whether you can attend.";
-      (!name ? $("#name") : $('input[name="attending"]')).focus();
-      return;
-    }
-    err.hidden = true;
-    const note = $("#note").value.trim();
-    const lines = [
-      "Hello,",
-      "",
-      att.value === "yes"
-        ? `${name} will attend the engagement of Adinan & Fathima Nazneen on 30 December 2026 at 5:00 PM, CIAL Golf Course${+guests.value > 1 ? ` (${guests.value} people)` : ""}.`
-        : `${name} is sorry to miss the engagement of Adinan & Fathima Nazneen on 30 December 2026, and sends warm wishes.`,
-    ];
-    if (note) lines.push("", note);
-    const msg = lines.join("\n");
-    $("#rsvp-message").textContent = msg;
-    $("#rsvp-wa").href = `https://wa.me/${HOST_WHATSAPP}?text=${encodeURIComponent(msg)}`;
-    form.hidden = true;
-    const res = $("#rsvp-result");
-    res.hidden = false;
-    requestAnimationFrame(() => res.classList.add("is-in"));
-    res.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
-  });
-  $("#rsvp-edit").addEventListener("click", () => { $("#rsvp-result").hidden = true; form.hidden = false; $("#name").focus(); });
-}
-
 
 /* ---------- pastel flowers (blooming clusters) ---------- */
 const PASTELS = [
@@ -458,5 +409,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollLoop();
   initCountdown();
   initCopy();
-  initRsvp();
 });
