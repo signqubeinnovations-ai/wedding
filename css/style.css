@@ -440,3 +440,42 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .contact__number { font-family: var(--f-display); font-size: var(--step-2); letter-spacing: .06em; font-variant-numeric: tabular-nums; }
 .footer__contact { font-family: var(--f-display); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sage-deep); text-decoration: none; padding: .4rem; }
 .footer__contact:hover { color: var(--gold); }
+
+/* ---------- drifting petals & leaves ---------- */
+main, .footer { overflow-x: clip; }
+.drift { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 101; pointer-events: none; }
+
+/* ---------- blooming pastel flower clusters ---------- */
+.flowers { position: absolute; z-index: 1; pointer-events: none; width: clamp(120px, 20vw, 240px); }
+.flowers svg { display: block; width: 100%; height: auto; overflow: visible; }
+.flowers--flip svg { transform: scaleX(-1); }
+.bloom__inner { transform-box: fill-box; transform-origin: center; }
+.js .flowers .bloom__inner { transform: scale(0) rotate(-90deg); }
+.flowers.is-in .bloom__inner {
+  animation: bloom 1.5s cubic-bezier(.2,.9,.3,1.2) var(--d, 0s) both, breathe 7s ease-in-out calc(var(--d, 0s) + 1.5s) infinite;
+}
+@keyframes bloom { from { transform: scale(0) rotate(-90deg); } to { transform: scale(1) rotate(0deg); } }
+@keyframes breathe { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.04) rotate(4deg); } }
+
+.hero .flowers--a { top: 14%; left: 3%; }
+.hero .flowers--b { bottom: 12%; right: 3%; }
+.letter .flowers--a { top: -56px; right: -48px; width: clamp(110px, 18vw, 190px); }
+.letter .flowers--b { bottom: -50px; left: -46px; width: clamp(100px, 16vw, 170px); }
+.love .flowers--a { top: 10%; left: max(0px, calc(50% - 26rem)); }
+.love .flowers--b { bottom: 6%; right: max(0px, calc(50% - 26rem)); }
+.env .flowers { left: -12%; bottom: -16%; width: 38%; z-index: 6; }
+@media (max-width: 600px) {
+  .hero .flowers--a { top: 9%; left: -4%; }
+  .hero .flowers--b { bottom: 8%; right: -4%; }
+  .letter .flowers--a { right: -22px; top: -48px; }
+  .letter .flowers--b { left: -22px; }
+  .love .flowers { width: 110px; opacity: .85; }
+  .love .flowers--a { top: 2%; left: -16px; }
+  .love .flowers--b { bottom: 2%; right: -16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .flowers .bloom__inner, .flowers.is-in .bloom__inner { transform: none; animation: none; }
+}
+
+.parents { font-style: italic; margin-top: -.6rem; }
+.parents span { white-space: nowrap; }

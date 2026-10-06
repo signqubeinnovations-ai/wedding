@@ -1,6 +1,6 @@
 # Adinan's Engagement
 
-Invitation website for the engagement of **Adinan AV** and **Fathima Nazneen**: Wednesday, 30 December 2026, 5:00 PM, at CIAL Golf Course, Nedumbassery, Kochi.
+Invitation website for the engagement of **Adinan AV** and **Fathima Nazneen** (daughter of PV Nihas & Simi Nihas): Wednesday, 30 December 2026, 5:00 PM, at CIAL Golf Course, Nedumbassery, Kochi.
 Hosted by Abdul Vahab & Najeema K, with love from Salman AV, Safwan AV, Nazreen, Adhil Abdul Azeez, Ashik Abdul Azeez, Ayisha, Fathima and the whole Puthen Veedu family.
 Contact: WhatsApp +91 94471 25325.
 
