@@ -18,6 +18,23 @@
 <script src="js/main.js" defer></script>
 </head>
 <body>
+<div class="intro" id="intro" aria-label="Invitation envelope">
+  <div class="leaves leaves--tl" aria-hidden="true"><svg viewBox="0 0 300 300" data-leaves="83"></svg></div>
+  <div class="leaves leaves--br" aria-hidden="true"><svg viewBox="0 0 300 300" data-leaves="97"></svg></div>
+  <div class="env">
+    <div class="env__back"></div>
+    <div class="env__letter" aria-hidden="true">
+      <small>You are invited</small>
+      <span class="script">Adinan AV</span>
+      <small>30 · 12 · 2026</small>
+    </div>
+    <div class="env__front"></div>
+    <div class="env__flap"></div>
+    <button class="env__seal" type="button" id="intro-open" aria-label="Open the invitation">A</button>
+  </div>
+  <p class="intro__hint">Tap the seal to open</p>
+  <button class="intro__skip" type="button" id="intro-skip">Skip</button>
+</div>
 <div class="progress" aria-hidden="true"></div>
 <header class="nav">
   <a class="nav__brand" href="index.html" aria-label="Home">A</a>

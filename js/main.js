@@ -271,6 +271,37 @@ function initRsvp() {
   $("#rsvp-edit").addEventListener("click", () => { $("#rsvp-result").hidden = true; form.hidden = false; $("#name").focus(); });
 }
 
+/* ---------- envelope intro (home page, once per visit) ---------- */
+function initIntro(done) {
+  const intro = $("#intro");
+  let seen = false;
+  try { seen = sessionStorage.getItem("envelopeOpened") === "1"; } catch {}
+  if (!intro || seen || reduceMotion) { intro?.remove(); done(); return; }
+  const root = document.documentElement;
+  root.classList.add("intro-active");
+  let opened = false;
+  function finish() {
+    intro.classList.add("is-done");
+    root.classList.remove("intro-active");
+    try { sessionStorage.setItem("envelopeOpened", "1"); } catch {}
+    done();
+    setTimeout(() => intro.remove(), 900);
+  }
+  function open(fast) {
+    if (opened) return;
+    opened = true;
+    clearTimeout(auto);
+    if (fast) return finish();
+    intro.classList.add("is-opening");
+    setTimeout(finish, 2300);
+  }
+  $("#intro-open").addEventListener("click", () => open(false));
+  $("#intro-skip").addEventListener("click", () => open(true));
+  addEventListener("keydown", e => { if (e.key === "Escape") open(true); }, { once: true });
+  // opens by itself if nobody taps, so the invitation is never stuck behind the envelope
+  const auto = setTimeout(() => open(false), 2600);
+}
+
 /* ---------- boot ---------- */
 document.documentElement.classList.add("js");
 document.addEventListener("DOMContentLoaded", () => {
@@ -282,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.fonts?.ready.then(paintAll);
 
   initNav();
-  initReveal();
+  initIntro(initReveal);
   initEvening();
   initScrollLoop();
   initCountdown();
