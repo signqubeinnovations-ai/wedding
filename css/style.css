@@ -453,3 +453,20 @@ main, .footer { overflow-x: clip; }
 
 .parents { font-style: italic; margin-top: -.6rem; }
 .parents span { white-space: nowrap; }
+
+/* ---------- no menu bar: buttons on the home page, a back link elsewhere ---------- */
+.hero__links { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: .6rem; }
+.back {
+  position: fixed; z-index: 40;
+  top: calc(14px + env(safe-area-inset-top, 0px)); left: 16px;
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .6rem 1rem .6rem .75rem; border-radius: 999px;
+  font-family: var(--f-display); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  text-decoration: none; color: var(--sage-deep);
+  background: rgba(248, 250, 244, .82); border: 1px solid var(--line);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  transition: background .25s, transform .25s;
+}
+.back svg { width: 16px; height: 16px; }
+.back:hover { background: var(--paper); transform: translateX(-2px); }
+.back:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }

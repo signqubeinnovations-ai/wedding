@@ -39,17 +39,6 @@
   <button class="intro__skip" type="button" id="intro-skip">Skip</button>
 </div>
 <div class="progress" aria-hidden="true"></div>
-<header class="nav">
-  <a class="nav__brand" href="index.html" aria-label="Home">A&amp;F</a>
-  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
-  </button>
-  <ul class="nav__links" id="menu">
-    <li><a href="index.html" aria-current="page">Invitation</a></li>
-    <li><a href="evening.html">The Evening</a></li>
-    <li><a href="venue.html">Venue</a></li>
-  </ul>
-</header>
 
 <main>
   <!-- Hero -->
@@ -63,6 +52,16 @@
       <p class="eyebrow" data-reveal="blur">You are invited to the engagement of</p>
       <h1 class="hero__name script gold-text" id="hero-name"><span>Adinan AV</span><span class="hero__amp">&amp;</span><span>Fathima Nazneen</span></h1>
       <p class="hero__meta" data-reveal style="--d:.9s"><span>30 December 2026</span><span>5:00 PM</span><span>Kochi</span></p>
+      <div class="hero__links" data-reveal style="--d:1.1s">
+        <a class="btn btn--primary" href="evening.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          The Evening
+        </a>
+        <a class="btn" href="venue.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+          Venue
+        </a>
+      </div>
     </div>
     <a class="scroll-cue" href="#letter">Scroll<i></i></a>
   </section>
