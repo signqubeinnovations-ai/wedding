@@ -8,13 +8,13 @@ UID:adinan-engagement-20261230@invite
 DTSTAMP:20261006T000000Z
 DTSTART:20261230T113000Z
 DTEND:20261230T143000Z
-SUMMARY:Engagement of Adinan AV
+SUMMARY:Engagement of Adinan AV & Fathima Nazneen
 LOCATION:CIAL Golf Course\, Nedumbassery\, Kochi
 DESCRIPTION:With love\, Abdul Vahab & Najeema K
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Adinan's engagement is tomorrow at 5:00 PM
+DESCRIPTION:The engagement of Adinan & Fathima is tomorrow at 5:00 PM
 END:VALARM
 END:VEVENT
 END:VCALENDAR

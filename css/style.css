@@ -413,3 +413,30 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .intro-active .hero__name { animation-play-state: paused; }
 
 @media (prefers-reduced-motion: reduce) { .js .intro { display: none; } }
+
+/* ---------- couple names, family, contact ---------- */
+.hero__name { font-size: clamp(3rem, 1.9rem + 6vw, 6.6rem); line-height: 1.05; }
+.hero__name > span { display: block; }
+.hero__name .hero__amp { font-size: .5em; line-height: 1.1; }
+.env__letter .script { font-size: calc(var(--w) * .085); }
+.env__seal { font-size: calc(var(--w) * .06); letter-spacing: -.02em; }
+.nav__brand { font-size: 1.6rem; }
+
+.love-title { font-size: var(--step-3); line-height: 1.2; padding-inline: .2em; }
+.family {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem 2rem;
+  max-width: 36rem;
+}
+.family li { font-size: var(--step-1); font-style: italic; white-space: nowrap; }
+.family li + li::before { content: none; }
+.family__all {
+  display: grid; justify-items: center; gap: .1rem;
+  font-family: var(--f-display); font-size: var(--step--1); letter-spacing: .26em; text-transform: uppercase; color: var(--sage-deep);
+}
+.family__all span { font-family: var(--f-script); font-size: var(--step-3); letter-spacing: 0; text-transform: none; color: var(--gold); line-height: 1.2; }
+
+.contact { padding: 1.8rem 1.6rem; display: grid; gap: .8rem; justify-items: center; width: 100%; max-width: 30rem; }
+.contact__number { font-family: var(--f-display); font-size: var(--step-2); letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.footer__contact { font-family: var(--f-display); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sage-deep); text-decoration: none; padding: .4rem; }
+.footer__contact:hover { color: var(--gold); }

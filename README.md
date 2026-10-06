@@ -1,7 +1,8 @@
 # Adinan's Engagement
 
-Invitation website for the engagement of **Adinan AV**: Wednesday, 30 December 2026, 5:00 PM, at CIAL Golf Course, Nedumbassery, Kochi.
-With love, Abdul Vahab & Najeema K.
+Invitation website for the engagement of **Adinan AV** and **Fathima Nazneen**: Wednesday, 30 December 2026, 5:00 PM, at CIAL Golf Course, Nedumbassery, Kochi.
+Hosted by Abdul Vahab & Najeema K, with love from Salman AV, Safwan AV, Nazreen, Adhil Abdul Azeez, Ashik Abdul Azeez, Ayisha, Fathima and the whole Puthen Veedu family.
+Contact: WhatsApp +91 94471 25325.
 
 ## Pages
 
@@ -25,7 +26,7 @@ Everything respects the visitor's "reduce motion" setting, and the content stays
 
 ## Settings
 
-- **RSVP WhatsApp number:** set `HOST_WHATSAPP` at the top of `js/main.js` (country code plus digits, e.g. `919876543210`). Left empty, WhatsApp asks the guest which chat to send to.
+- **RSVP WhatsApp number:** set `HOST_WHATSAPP` at the top of `js/main.js` (country code plus digits, e.g. `919876543210`). Currently set to +91 94471 25325. Left empty, WhatsApp asks the guest which chat to send to.
 - **Event time:** `EVENT_START` / `EVENT_END` in `js/main.js` drive the countdown. The calendar links in `evening.html` and `adinan-engagement.ics` use the same times.
 
 ## Run locally

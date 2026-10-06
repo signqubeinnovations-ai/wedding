@@ -4,7 +4,7 @@
 
 /* Put the hosts' WhatsApp number here (country code, digits only, e.g. "919876543210")
    so RSVP replies open a chat with them directly. Left empty, WhatsApp asks whom to send to. */
-const HOST_WHATSAPP = "";
+const HOST_WHATSAPP = "919447125325";
 
 const EVENT_START = Date.parse("2026-12-30T17:00:00+05:30");
 const EVENT_END = Date.parse("2026-12-30T22:00:00+05:30");
@@ -255,8 +255,8 @@ function initRsvp() {
       "Hello,",
       "",
       att.value === "yes"
-        ? `${name} will attend Adinan's engagement on 30 December 2026 at 5:00 PM, CIAL Golf Course${+guests.value > 1 ? ` (${guests.value} people)` : ""}.`
-        : `${name} is sorry to miss Adinan's engagement on 30 December 2026, and sends warm wishes.`,
+        ? `${name} will attend the engagement of Adinan & Fathima Nazneen on 30 December 2026 at 5:00 PM, CIAL Golf Course${+guests.value > 1 ? ` (${guests.value} people)` : ""}.`
+        : `${name} is sorry to miss the engagement of Adinan & Fathima Nazneen on 30 December 2026, and sends warm wishes.`,
     ];
     if (note) lines.push("", note);
     const msg = lines.join("\n");
