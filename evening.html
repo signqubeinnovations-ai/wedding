@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Evening · Adinan's Engagement</title>
+<meta name="description" content="Wednesday, 30 December 2026 at 5:00 PM. Add Adinan's engagement to your calendar.">
+<meta name="theme-color" content="#e6ecdf">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="dusk" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<header class="nav">
+  <a class="nav__brand" href="index.html" aria-label="Home">A</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+  </button>
+  <ul class="nav__links" id="menu">
+    <li><a href="index.html">Invitation</a></li>
+    <li><a href="evening.html" aria-current="page">The Evening</a></li>
+    <li><a href="venue.html">Venue</a></li>
+    <li><a href="rsvp.html">RSVP</a></li>
+  </ul>
+</header>
+
+<main data-evening>
+  <section class="hero" aria-labelledby="t">
+    <canvas class="gold" data-seed="13" aria-hidden="true"></canvas>
+    <div class="leaves leaves--tl" data-parallax="-.3" data-axis="x" aria-hidden="true"><svg viewBox="0 0 300 300" data-leaves="41"></svg></div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-reveal="blur">Save the date</p>
+      <h1 class="hero__name script gold-text" id="t">The Evening</h1>
+      <p class="hero__meta" data-reveal style="--d:.9s"><span>Wednesday</span><span>30 December 2026</span></p>
+    </div>
+    <a class="scroll-cue" href="#date">Scroll<i></i></a>
+  </section>
+
+  <!-- the date, set large -->
+  <section class="section" id="date">
+    <div class="wrap">
+      <div class="bigdate" aria-label="30 December 2026">
+        <span class="bigdate__day" data-reveal="zoom" data-parallax="-.04">30</span>
+        <span class="bigdate__month" data-reveal style="--d:.2s">December</span>
+        <span class="bigdate__year" data-reveal style="--d:.35s">2026</span>
+      </div>
+      <p class="lede" data-reveal style="--d:.2s">The last Wednesday of the year, kept aside for family.</p>
+    </div>
+  </section>
+
+  <!-- the hour: clock hands sweep to five as you scroll -->
+  <section class="section" aria-labelledby="hour-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>The hour</p>
+      <svg class="clock" viewBox="0 0 200 200" role="img" aria-label="Clock showing five o'clock">
+        <circle class="face" cx="100" cy="100" r="92"/>
+        <g class="ticks">
+          <line class="tick" x1="100" y1="16" x2="100" y2="28"/><line class="tick" x1="184" y1="100" x2="172" y2="100"/>
+          <line class="tick" x1="100" y1="184" x2="100" y2="172"/><line class="tick" x1="16" y1="100" x2="28" y2="100"/>
+          <line class="tick" x1="142" y1="27.3" x2="139" y2="32.5"/><line class="tick" x1="172.7" y1="58" x2="167.5" y2="61"/>
+          <line class="tick" x1="172.7" y1="142" x2="167.5" y2="139"/><line class="tick" x1="142" y1="172.7" x2="139" y2="167.5"/>
+          <line class="tick" x1="58" y1="172.7" x2="61" y2="167.5"/><line class="tick" x1="27.3" y1="142" x2="32.5" y2="139"/>
+          <line class="tick" x1="27.3" y1="58" x2="32.5" y2="61"/><line class="tick" x1="58" y1="27.3" x2="61" y2="32.5"/>
+        </g>
+        <line class="hand hand--h" x1="100" y1="100" x2="100" y2="55"/>
+        <line class="hand hand--m" x1="100" y1="100" x2="100" y2="30"/>
+        <circle class="pin" cx="100" cy="100" r="5"/>
+      </svg>
+      <h2 class="title" id="hour-title" data-reveal>5:00 PM</h2>
+      <p data-reveal style="--d:.1s">Guests are welcome from five, as the afternoon softens into evening.</p>
+    </div>
+  </section>
+
+  <!-- sunset: the sun sinks as you scroll -->
+  <section class="section" aria-labelledby="dusk-title">
+    <div class="wrap">
+      <div class="horizon" aria-hidden="true"><div class="sun"></div></div>
+      <h2 class="title" id="dusk-title" data-reveal>Into the dusk</h2>
+      <p data-reveal style="--d:.1s">Late December sunsets in Kochi come a little after six, so the celebration carries on into the evening light over the greens.</p>
+    </div>
+  </section>
+
+  <!-- calendar + countdown -->
+  <section class="section" aria-labelledby="cal-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Don't miss it</p>
+      <h2 class="title" id="cal-title" data-reveal style="--d:.1s">Keep the evening free</h2>
+      <div class="countdown" data-countdown data-reveal="zoom" style="--d:.2s" aria-label="Countdown to the engagement">
+        <div class="unit"><b data-cd="d">--</b><span>Days</span></div>
+        <div class="unit"><b data-cd="h">--</b><span>Hours</span></div>
+        <div class="unit"><b data-cd="m">--</b><span>Mins</span></div>
+        <div class="unit"><b data-cd="s">--</b><span>Secs</span></div>
+      </div>
+      <p class="lede muted" data-countdown-done hidden></p>
+      <div class="actions" data-reveal style="--d:.3s">
+        <a class="btn btn--primary" target="_blank" rel="noopener"
+           href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Engagement%20of%20Adinan%20AV&amp;dates=20261230T113000Z%2F20261230T143000Z&amp;location=CIAL%20Golf%20Course%2C%20Nedumbassery%2C%20Kochi&amp;details=With%20love%2C%20Abdul%20Vahab%20%26%20Najeema%20K">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>
+          Google Calendar
+        </a>
+        <a class="btn" href="adinan-engagement.ics" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+          Apple / Outlook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <a class="card-link" href="venue.html" data-reveal style="max-width:26rem;width:100%">
+        <span class="eyebrow">Next</span>
+        <h3>The Venue</h3>
+        <p>CIAL Golf Course, Nedumbassery, and how to get there.</p>
+        <span class="arrow">Continue →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="script">Adinan</p>
+  <small>30 · 12 · 2026 &nbsp;·&nbsp; Kochi</small>
+</footer>
+</body>
+</html>

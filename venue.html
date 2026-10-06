@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venue · Adinan's Engagement</title>
+<meta name="description" content="CIAL Golf Course, Nedumbassery, Kochi, beside Cochin International Airport. Directions for guests.">
+<meta name="theme-color" content="#e6ecdf">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="nav">
+  <a class="nav__brand" href="index.html" aria-label="Home">A</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+  </button>
+  <ul class="nav__links" id="menu">
+    <li><a href="index.html">Invitation</a></li>
+    <li><a href="evening.html">The Evening</a></li>
+    <li><a href="venue.html" aria-current="page">Venue</a></li>
+    <li><a href="rsvp.html">RSVP</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="t">
+    <canvas class="gold" data-seed="23" aria-hidden="true"></canvas>
+    <div class="leaves leaves--br" data-parallax=".3" data-axis="x" aria-hidden="true"><svg viewBox="0 0 300 300" data-leaves="53"></svg></div>
+    <div class="leaves leaves--tl" data-parallax="-.3" data-axis="x" aria-hidden="true"><svg viewBox="0 0 300 300" data-leaves="61"></svg></div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-reveal="blur">Join us at</p>
+      <h1 class="hero__name script gold-text" id="t">The Venue</h1>
+      <p class="hero__meta" data-reveal style="--d:.9s"><span>CIAL Golf Course</span><span>Nedumbassery</span></p>
+    </div>
+    <a class="scroll-cue" href="#route">Scroll<i></i></a>
+  </section>
+
+  <!-- route drawn as you scroll -->
+  <section class="section" id="route" aria-labelledby="route-title">
+    <div class="wrap wrap--wide">
+      <p class="eyebrow" data-reveal>Along NH 544</p>
+      <h2 class="title" id="route-title" data-reveal style="--d:.1s">The way to the greens</h2>
+      <svg class="route" viewBox="0 0 720 260" role="img" aria-label="Simplified route: Kochi city, Aluva, the airport junction on NH 544, then CIAL Golf Course" data-draw-host>
+        <path class="road" d="M40 210 C 170 210, 200 120, 300 130 S 450 200, 520 120 S 640 50, 680 60"/>
+        <path class="drawn" data-draw d="M40 210 C 170 210, 200 120, 300 130 S 450 200, 520 120 S 640 50, 680 60"/>
+        <circle class="stop" cx="40" cy="210" r="8"/><text x="40" y="245" text-anchor="middle">Kochi city</text>
+        <circle class="stop" cx="300" cy="130" r="8"/><text x="300" y="108" text-anchor="middle">Aluva</text>
+        <circle class="stop" cx="520" cy="120" r="8"/><text x="520" y="160" text-anchor="middle">Airport jn.</text>
+        <path class="pin" d="M680 60c0 0-16-15-16-27a16 16 0 0 1 32 0c0 12-16 27-16 27z" transform="translate(0 -6)"/>
+        <circle cx="680" cy="27" r="5.5" fill="#f8faf4"/>
+        <text x="680" y="92" text-anchor="middle">CIAL Golf</text>
+      </svg>
+      <p class="muted" data-reveal style="font-size:var(--step--1)">Illustration only, not to scale.</p>
+    </div>
+  </section>
+
+  <!-- address -->
+  <section class="section" aria-labelledby="addr-title">
+    <div class="wrap">
+      <div class="address panel" data-reveal="zoom">
+        <p class="eyebrow" id="addr-title">Address</p>
+        <strong>CIAL Golf Course</strong>
+        <p class="address__line">Nedumbassery, Kochi, Kerala</p>
+        <p class="muted">On the Cochin International Airport campus</p>
+      </div>
+      <div class="actions" data-reveal style="--d:.15s">
+        <a class="btn btn--primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=CIAL+Golf+Course+Nedumbassery+Kochi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+          Google Maps
+        </a>
+        <a class="btn" target="_blank" rel="noopener" href="https://maps.apple.com/?q=CIAL+Golf+Course&amp;address=Nedumbassery,+Kochi,+Kerala">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+          Apple Maps
+        </a>
+        <button class="btn" type="button" data-copy-text="CIAL Golf Course, Nedumbassery, Kochi, Kerala">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+          <span>Copy address</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ways to arrive -->
+  <section class="section" aria-labelledby="ways-title">
+    <div class="wrap wrap--wide">
+      <p class="eyebrow" data-reveal>Getting there</p>
+      <h2 class="title" id="ways-title" data-reveal style="--d:.1s">Arriving from</h2>
+      <div class="ways">
+        <div class="way panel" data-reveal="left">
+          <h3>The airport</h3>
+          <p>The golf course is part of the Cochin International Airport campus, a short drive from the terminals.</p>
+        </div>
+        <div class="way panel" data-reveal style="--d:.12s">
+          <h3>Aluva &amp; Angamaly</h3>
+          <p>Take NH 544 to the airport junction and follow the CIAL signs into Nedumbassery.</p>
+        </div>
+        <div class="way panel" data-reveal="right" style="--d:.24s">
+          <h3>Kochi city</h3>
+          <p>Head north on NH 544 through Aluva towards the airport. Allow extra time for evening traffic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <a class="card-link" href="rsvp.html" data-reveal style="max-width:26rem;width:100%">
+        <span class="eyebrow">Next</span>
+        <h3>RSVP</h3>
+        <p>Let the family know if you can join.</p>
+        <span class="arrow">Reply now →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="script">Adinan</p>
+  <small>30 · 12 · 2026 &nbsp;·&nbsp; Kochi</small>
+</footer>
+</body>
+</html>
