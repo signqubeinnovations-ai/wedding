@@ -112,6 +112,17 @@ h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: sheen 7s ease-in-out infinite;
 }
+/* couple's names: deeper gold plus a soft shadow so they stand out on the light paper.
+   Shadow sits on an inner span because the reveal/intro animations reset filter on the outer element. */
+.name-gold {
+  display: inline-block; padding: .05em .12em;
+  background: linear-gradient(100deg, #6e4b15 0%, #9a6a22 30%, #c8973f 50%, #9a6a22 70%, #6a4612 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(255,255,255,.7)) drop-shadow(0 3px 6px rgba(70,45,10,.35));
+  animation: sheen 7s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .name-gold { animation: none; } }
 @keyframes sheen { 0%, 100% { background-position: 0% 0; } 50% { background-position: 100% 0; } }
 
 .title { font-family: var(--f-display); font-size: var(--step-3); line-height: 1.15; letter-spacing: .02em; }
