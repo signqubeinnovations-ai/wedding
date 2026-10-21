@@ -6,15 +6,15 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:adinan-engagement-20261230@invite
 DTSTAMP:20261006T000000Z
-DTSTART:20261230T113000Z
-DTEND:20261230T143000Z
+DTSTART:20261230T123000Z
+DTEND:20261230T153000Z
 SUMMARY:Engagement of Adinan AV & Fathima Nazneen
-LOCATION:CIAL Golf Course\, Nedumbassery\, Kochi
+LOCATION:KTDC Bolgatty Palace\, Bolgatty Island\, Kochi
 DESCRIPTION:With love\, Abdul Vahab & Najeema K
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:The engagement of Adinan & Fathima is tomorrow at 5:00 PM
+DESCRIPTION:The engagement of Adinan & Fathima is tomorrow at 6:00 PM
 END:VALARM
 END:VEVENT
 END:VCALENDAR

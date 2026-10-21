@@ -2,8 +2,8 @@
    Decorations (leaves, gold leaf), scroll reveal, parallax, scroll-drawn lines,
    nav, countdown, and the page-specific scenes on The Evening and Venue pages. */
 
-const EVENT_START = Date.parse("2026-12-30T17:00:00+05:30");
-const EVENT_END = Date.parse("2026-12-30T22:00:00+05:30");
+const EVENT_START = Date.parse("2026-12-30T18:00:00+05:30");
+const EVENT_END = Date.parse("2026-12-30T23:00:00+05:30");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -191,10 +191,10 @@ function initEvening() {
   const hourHand = $(".hand--h", scene), minHand = $(".hand--m", scene);
   const clock = $(".clock", scene), horizon = $(".horizon", scene);
   onScroll(() => {
-    // clock sweeps from 12:00 to 5:00 as it crosses the screen
+    // clock sweeps from 12:00 to 6:00 as it crosses the screen
     if (clock) {
       const t = reduceMotion ? 1 : Math.min(1, progressOf(clock) * 1.8);
-      const minutes = t * 300; // 0..5 hours
+      const minutes = t * 360; // 0..6 hours
       hourHand.style.transform = `rotate(${minutes * .5}deg)`;
       minHand.style.transform = `rotate(${minutes * 6}deg)`;
     }
