@@ -197,6 +197,8 @@ h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
 .detail__label { font-family: var(--f-display); font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--sage-deep); }
 .detail__value { font-style: italic; font-weight: 500; line-height: 1.3; }
 .detail__sub { font-size: var(--step--1); color: var(--sage-deep); line-height: 1.3; }
+.detail__btn { margin-top: .8rem; }
+.detail .detail__btn svg { width: 16px; height: 16px; color: currentColor; }
 @media (max-width: 600px) {
   .details { grid-template-columns: 1fr 1fr; }
   .detail--wide { grid-column: 1 / -1; border-left: 0 !important; border-top: 1px solid var(--line); }
